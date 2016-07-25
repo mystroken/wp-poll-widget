@@ -1,0 +1,81 @@
+<div class="row" ng-controller="create">
+
+    <form action="<?php echo $route['add_edit']; ?>" method="post" class="col-s-10 col-m-8">
+
+        <div class="row">
+
+            <div class="col-s-12 col-m-7">
+
+                <h2>
+                    <span ng-bind-html="icon">{{ icon }}</span> Créer un nouveau sondage
+                </h2>
+
+            </div>
+
+            <div class="col-s-12 col-m-4" style="margin-top: 10px; text-align: right">
+
+                <input type="submit" value="Enregistrer" class="button-primary" id="sondage_apply_btn">
+                <a href="#/" class="button-secondary" id="sondage_cancel_btn">Annuler</a>
+
+            </div>
+
+        </div>
+
+
+        <br><br>
+
+
+        <div class="row">
+
+            <div class="col-s-11" style="width: 95%">
+
+                <p>
+                    <input type="text" value="" class="large-text sondage-title" placeholder="Entrez un nom à ce sondage" name="sondage_title_input" id="sondage_title_input">
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-s-12 col-m-7">
+
+                <h3>
+                    Question
+                </h3>
+
+                <div ng-bind-html="editor">{{ editor }}</div>
+
+            </div>
+
+            <div class="col-s-12 col-m-4" style="text-align: right">
+
+                <h3>
+                    Réponses à choisir
+                </h3>
+
+                <p>
+                    <input type="text" name="sondage_answer_input" id="sondage_answer_input" size="18" autocomplete="off">
+                    <input type="button" class="button" id="sondage_answer_add_btn" value="Ajouter">
+                </p>
+
+                <p>
+                    <small>Réponses déjà enregistrées</small>
+                </p>
+
+                <ul id="answers_list_ul" class="answers_list_ul">
+                    <li>Oui <span class="sondage_answer_del_btn">X</span></li>
+                    <li>Non <span class="sondage_answer_del_btn">X</span></li>
+                    <li>Peut etre <span class="sondage_answer_del_btn">X</span></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
